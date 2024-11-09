@@ -9,143 +9,153 @@
      
 </head>
 <body>
+    <div class="game">
    <div id="main">
-    <div class="players" id="red"></div>
-    <div class="players" id="blue"></div>
-    <img src = "images/ladder/ladder1.png" id="l1">
-    <img src = "images/ladder/ladder1.png" id="l2">
-    <!-- <img src = "images/ladder/ladder1.png" id="13">
-    <img src = "images/ladder/ladder1.png" id="14">
-    <img src = "images/ladder.webp" id="15">
-    <img src = "images/ladder.webp" id="16">
-    <img src = "images/ladder.webp" id="17">
-    <img src = "images/ladder.webp" id="18">
-    <img src = "images/ladder.webp" id="19">
-    <img src = "images/ladder.webp" id="110"> -->
-
-    <img src= "images/snakes/bite.png" id="s1"> 
-    <!-- <img src= "images/snakes/snake.svg" id="s2">  -->
-    <!--<img src= "images/snakes/snake (1).png" id="s3"> 
-    <img src= "images/snakes/snake (2).png" id="s4"> 
-    <img src= "images/snakes/snake1.png" id="s5"> 
-    <img src= "images/snakes/snake.png" id="s6"> 
-    <img src= "images/snakes/bite.png" id="s7"> 
-    <img src= "images/snakes/snake (1).png" id="s8">  -->
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-   </div>
-
-   <!-- <div id="side">
-    <p id="p_turn">Red Player's Turn</p>
-        <div id="cube_outer">
-            <div id="cube_inner">
-                <div id="front"><img src="images/dice/1.png"></div>
-                <div id="back"><img src="images/dice/2.png"></div>
-                <div id="left"><img src="images/dice/3.png"></div>
-                <div id="right"><img src="images/dice/4.png"></div>
-                <div id="top"><img src="images/dice/5.png"></div>
-                <div id="bottom"><img src="images/dice/6.png"></div>
-            </div>
+        <div id="gameBoard">
+            <p id="turnIndicator">Red Player's Turn</p>
         </div>
-   </div> -->
+
+        <div id="gameContainer">
+            <div class="players" id="red"></div>
+            <div class="players" id="blue"></div>
+            <!-- <img src = "images/ladder/ladder1.png" id="l1">
+            <img src = "images/ladder/ladder1.png" id="l2"> -->
+
+            <!-- <img src = "images/ladder/ladder1.png" id="13">
+            <img src = "images/ladder/ladder1.png" id="14">
+            <img src = "images/ladder.webp" id="15">
+            <img src = "images/ladder.webp" id="16">
+            <img src = "images/ladder.webp" id="17">
+            <img src = "images/ladder.webp" id="18">
+            <img src = "images/ladder.webp" id="19">
+            <img src = "images/ladder.webp" id="110"> -->
+
+            <!-- <img src= "images/snakes/bite.png" id="s1">  -->
+
+            <!-- <img src= "images/snakes/snake.svg" id="s2">  -->
+            <!--<img src= "images/snakes/snake (1).png" id="s3"> 
+            <img src= "images/snakes/snake (2).png" id="s4"> 
+            <img src= "images/snakes/snake1.png" id="s5"> 
+            <img src= "images/snakes/snake.png" id="s6"> 
+            <img src= "images/snakes/bite.png" id="s7"> 
+            <img src= "images/snakes/snake (1).png" id="s8">  -->
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+    </div>
+</div>
+
+<div id="side">
+    <p id="p_turn">Red Player's Turn</p>
+    <div id="cube_outer">
+        <div id="cube_inner">
+            <div id="front"><img src="images/dice/1.png"></div>
+            <div id="back"><img src="images/dice/2.png"></div>
+            <div id="left"><img src="images/dice/3.png"></div>
+            <div id="right"><img src="images/dice/4.png"></div>
+            <div id="top"><img src="images/dice/5.png"></div>
+            <div id="bottom"><img src="images/dice/6.png"></div> 
+        </div>
+    </div>
+</div>
+</div>
    <!-- LINK JAVA SCRIPT -->
    <script src="script.js"></script>
 </body>

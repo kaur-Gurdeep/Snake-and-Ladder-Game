@@ -130,45 +130,127 @@ img {
 }
  */
 
+
  body {
   background-color: lightgrey;
   font-family: Arial, Helvetica, sans-serif;
-  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+}
+.game{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-color: bisque;
 }
 
 #main {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 0.1vmin solid black;
-  height: 98vmin;
-  width: 98vmin;
+  background-color: black;
+  border: 2px solid black;
+  max-width: 90vmin;
+  width: 90vw;  
+  height: 100vw;
+  max-height: 100vmin;
+  margin: 5px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+#gameBoard {
+  background-color: #a59a9a;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+#turnIndicator {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4d4d; /* Red color for the red player's turn */
+}
+
+#gameContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+  pointer-events: none; 
 }
 
 .box {
-  float: left;
-  height: 9.601vmin;
-  width: 9.601vmin;
+  width: 10%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(1vmin + 0.5rem);
+  background-color: #4ca5dd;
+  color: white;
   border: 0.1vmin solid black;
-  text-align: center;
-  line-height: 9.601vmin;
-  font-size: 2.5vmin;
-  background-color: #a9d18e;
+  box-sizing: border-box; /* Include border in width/height */
+  
 }
 
+/* Game Container for Player Pieces */
+
+.players {
+  /* position: absolute;
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: margin 0.4s; */
+    position: absolute;
+    width: 5%;
+    height: 5%;
+    border-radius: 50%;
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    transform: translate(50%, -40%); /* Adjusts center position slightly */
+    transition: margin 0.4s;
+  
+}
+
+.players#red {
+  background-color: red;
+}
+
+.players#blue {
+  background-color: blue;
+}
+
+/* Dice and Player Turn Indicator */
 #side {
-  position: absolute;
-  top: 1vmin;
-  left: 1vmin;
-  height: 25vmin;
-  width: 35vmin;
-  border: 0.2vmin solid black;
+  position: relative;
+  display: flex;
+  height: 150px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: white;
+  padding: 1rem;
+  border-radius: 1vmin;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
-  font-size: 3.5vmin;
+  font-size: calc(1vmin + 1rem);
+  bottom: 0; 
+  left: 50%; 
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  margin-top: 20px; 
+}
+
+#p_turn {
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 #cube_outer {
@@ -190,74 +272,59 @@ img {
   height: 100%;
   width: 100%;
   position: absolute;
-
-
-
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
+
 #front { 
-    transform: translateZ(4vmin); 
+  transform: translateZ(4vmin); 
 }
 #back { 
-    transform: rotateY(180deg) translateZ(4vmin); 
+  transform: rotateY(180deg) translateZ(4vmin); 
 }
 #left {
-    transform: rotateY(-90deg) translateX(-4vmin);
-    transform-origin: left; 
+  transform: rotateY(-90deg) translateX(-4vmin);
+  transform-origin: left; 
 }
 #right { 
-    transform: rotateY(90deg) translateX(4vmin); 
-    transform-origin: right;
+  transform: rotateY(90deg) translateX(4vmin); 
+  transform-origin: right;
 }
 #top { 
-    transform: rotateX(-90deg) translateY(-4vmin); 
-    transform-origin: top;
+  transform: rotateX(-90deg) translateY(-4vmin); 
+  transform-origin: top;
 }
 #bottom { 
-    transform: rotateX(90deg) translateY(4vmin); 
-    transform-origin: bottom;
+  transform: rotateX(90deg) translateY(4vmin); 
+  transform-origin: bottom;
 }
 img {
   height: 100.3%;
   width: 100.3%;
 }
-.players {
-  position: absolute;
-  top: 90vmin;
-  left: 3vmin;
-  height: 4vmin;
-  width: 4vmin;
-  border-radius: 50%;
-  opacity: 0.7;
-  transition-duration: 0.4s;
-  transition-property: margin;
-}
 
-.players:nth-child(1) {
-  background-color: red;
-}
-.players:nth-child(2) {
-  background-color: blue;
-}
-#main img{
-    position: absolute;
-}
-#l1{
-    transform: scale(0.3) scaleX(0.6) scaleY(0.8) rotate(15deg);
-    top: 34.3vmin;
-    left: -29.5vmin;
-}
-#l2{
-    transform: scale(0.3) scaleX(0.6) scaleY(0.8) rotate(15deg);
-    top: 5vmin;
-    left: 11vmin;
-}
-#s1{
-    transform: scale(0.4) scaleY(0.8) rotate(341deg);
-    top: -27vmin;
-    left: -41vmin;
+/* Responsive Design */
+/* @media (max-width: 600px) { */
+  @media (min-width: 37.5em) /*600px / 16px = 37.5em*/ /* @media (max-width: 1920px) and (min-width: 320px) */ {
+  body{
+    height: 100vh;
+  }
+    #main {
+    width: 100vw;
+    height: 100vw;
+  }
+  .box {
+    font-size: calc(0.8vmin + 0.5rem);
+    width: 10%;
+    height: 10%;
+  }
+  #side {
+    background-color: gray;
+    /* height: 300px; */
+    width: 30%;
+    /* top: auto;  */
+    bottom: 1%; 
+    right: auto;
+    left: 50%; 
+    /* transform: translateX(-50%); */
+    font-size: calc(1vmin + 0.5rem);
+  }
 }
