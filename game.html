@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake and Ladder</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Custom CSS -->
+    <link href="styles/game.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="game">
+      <div id="side" class="side">
+        <p id="turnIndicator">Red Player's Turn</p>
+        <div id="cube_outer">
+          <div id="cube_inner">
+            <div id="front">
+              <img src="images/dice/1.png" alt="Dice face showing 1" />
+            </div>
+            <div id="back">
+              <img src="images/dice/2.png" alt="Dice face showing 2" />
+            </div>
+            <div id="left">
+              <img src="images/dice/3.png" alt="Dice face showing 3" />
+            </div>
+            <div id="right">
+              <img src="images/dice/4.png" alt="Dice face showing 4" />
+            </div>
+            <div id="top">
+              <img src="images/dice/5.png" alt="Dice face showing 5" />
+            </div>
+            <div id="bottom">
+              <img src="images/dice/6.png" alt="Dice face showing 6" />
+            </div>
+          </div>
+        </div>
+        <div class="button-container">
+          <div id="volumeBtn" class="button-menu"></div>
+          <div id="helpBtn" class="button-menu"></div>
+          <div id="closeBtn" class="button-menu"></div>
+          <div id="settingBtn" class="button-menu"></div>
+        </div>
+      </div>
+      <div id="gameContainer">
+        <img src="images/ladder/l1.png" id="l1" alt="Ladder 1" />
+        <img src="images/ladder/l1.png" id="l2" alt="Ladder 2" />
+        <img src="images/ladder/l1.png" id="l3" alt="Ladder 3" />
+        <img src="images/ladder/l1.png" id="l4" alt="Ladder 4" />
+        <img src="images/ladder/l1.png" id="l5" alt="Ladder 5" />
+        <img src="images/ladder/l1.png" id="l6" alt="Ladder 6" />
+        <img src="images/ladder/l1.png" id="l7" alt="Ladder 7" />
+
+        <img src="images/snakes/s1.png" id="s1" alt="Snake 1" />
+        <img src="images/snakes/s2.png" id="s2" alt="Snake 2" />
+        <img src="images/snakes/s3.png" id="s3" alt="Snake 3" />
+        <img src="images/snakes/s4.png" id="s4" alt="Snake 4" />
+        <img src="images/snakes/s5.png" id="s5" alt="Snake 5" />
+        <img src="images/snakes/s6.png" id="s6" alt="Snake 6" />
+        <img src="images/snakes/s7.png" id="s7" alt="Snake 7" />
+        <img src="images/snakes/s8.png" id="s8" alt="Snake 8" />
+        <img src="images/snakes/s9.png" id="s9" alt="Snake 9" />
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+        <div class="players" id="red">
+          <img src="images/red.png" alt="Red player token" />
+        </div>
+        <div class="players" id="blue">
+          <img src="images/blue.png" alt="Blue player token" />
+        </div>
+        <div class="players" id="yellow">
+          <img src="images/yellow.png" alt="Yellow player token" />
+        </div>
+        <div class="players" id="green">
+          <img src="images/green.png" alt="Green player token" />
+        </div>
+
+        <div id="messageContainer" class="message-container"></div>
+      </div>
+
+      <div id="winnerModal" class="modal">
+        <div class="modal-content">
+          <h2 id="gameOverMessage">Game Over!</h2>
+          <p id="resultMessage"></p>
+          <ul id="winnerList"></ul>
+          <div class="modal-buttons">
+            <button id="homeBtn">Home</button>
+            <button id="viewLadderBtn">Watch Ladder</button>
+            <button id="restartGameBtn">Restart Game</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="helpModal" class="modal">
+        <div class="modal-content">
+          <h2>Reach the end of the board by launching the dice!</h2>
+          <p>
+            Use 'Space' key for rolling the dice<br /><br />
+            Rolling a 6 will give the player an extra dice.
+          </p>
+          <p><strong>Ladder:</strong> You go up!</p>
+          <p><strong>Snake:</strong> You go down!</p>
+          <div class="modal-buttons">
+            <button id="closeHelpBtn">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript File -->
+    <script src="script/game.js"></script>
+  </body>
+</html>

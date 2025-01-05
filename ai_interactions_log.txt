@@ -1,1 +1,20 @@
-Asked: Generate dice image for my game
+----------Assets and Resources----------
+
+Dice Images: commons.wikimedia.org
+
+Snake Images: www.flaticon.com
+
+Button and Icon Images (Cancel, Info, Volume, Play): freepik.com
+
+Game Mode Images: Google Image Search
+
+MP3 Sounds: pixabay.com
+
+Background Texture (Paper): https://www.transparenttextures.com/
+
+----------ChatGpt----------
+1. How to Add Sounds to the Game
+2. How to Place Images Above the Grid
+3. How to Pass Data from One Page to Another (JavaScript)
+
+
