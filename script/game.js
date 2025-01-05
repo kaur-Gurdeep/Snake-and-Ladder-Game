@@ -12,27 +12,32 @@ document.addEventListener('DOMContentLoaded', function () {
   const buttons = document.querySelectorAll('#closeBtn, #helpBtn, #volumeBtn');
   const volumeBtn = document.getElementById('volumeBtn');
   const modal = document.getElementById('winnerModal');
-  let canShowModal = false;
-  let isMuted = false;
+  let canShowModal = false; // Flag to track if the winner modal can be shown
+  let isMuted = false; // Flag to track if audio is muted
 
+  // Attach event listener to home button to redirect to homepage
   homeBtn.addEventListener('click', redirectToHome);
 
+  // Attach event listener to home button to redirect to homepage
   viewLadderBtn.addEventListener('click', function () {
     showLadder();
     canShowModal = true;
   });
 
+  // Restart game and disable modal display
   restartGameBtn.addEventListener('click', function () {
     restartGame();
     canShowModal = false;
   });
 
+  // Toggle settings visibility (e.g., volume, help, close buttons)
   settingBtn.addEventListener('click', function () {
     buttons.forEach((button) => {
       button.classList.toggle('show');
     });
   });
 
+  // Add click event listeners to close, help, and volume buttons
   buttons.forEach((button) => {
     button.addEventListener('click', function (e) {
       const targetId = e.target.id;
@@ -80,34 +85,34 @@ const playerData = JSON.parse(localStorage.getItem('playerData') || '[]');
 const playerCount = parseInt(localStorage.getItem('playerCount') || '0');
 const colors = playerData.map((player) => player.color);
 const gameMode = localStorage.getItem('gameMode') || 'default';
-let playerPositions = {};
-let playersFinished = [];
-let stopEvent = false;
-let gameOver = false;
-let redPosition = 1;
+let playerPositions = {}; // Track player positions
+let playersFinished = []; // Store players who finished the game
+let stopEvent = false; // Stop further events (e.g., during animations)
+let gameOver = false; // Flag to check if game has ended
+let redPosition = 1; // Initial player positions
 let bluePosition = 1;
 let greenPosition = 1;
 let yellowPosition = 1;
-// Store snakes and ladders based on selected mode
-let snakesAndLadders = {};
-// Grid constants
-const boxSize = 8;
-const maxColumns = 10;
-const maxRows = 10;
-// Define available player colors
-const allColors = ['red', 'blue', 'green', 'yellow'];
+let snakesAndLadders = {}; // Store snakes and ladders based on selected mode
+
+// Grid and player constants
+const boxSize = 8; // Size of each box (grid cell)
+const maxColumns = 10; // Number of columns in the grid
+const maxRows = 10; // Number of rows in the grid
+const allColors = ['red', 'blue', 'green', 'yellow']; // Allowed player colors
 const playerColors = playerData.map((player) => player.color.toLowerCase());
-let activePlayers = colors.slice(0, Math.min(playerCount, 4));
+let activePlayers = colors.slice(0, Math.min(playerCount, 4)); // Limit to 4 players
+
 // Friendly Mode Snakes and Ladders positions
 const friendlyModeSnakesAndLadders = {
-  15: 8,
+  15: 8, // Snake: Head at 15, tail at 8
   28: 9,
   45: 27,
   70: 32,
   80: 42,
   87: 55,
 
-  2: 39,
+  2: 39, // Ladder: Base at 2, top at 39
   4: 36,
   33: 68,
   38: 57,
@@ -134,6 +139,8 @@ const difficultModeSnakesAndLadders = {
   62: 81,
   73: 94,
 };
+
+// Sound effects for game actions
 const sounds = {
   playerMove: new Audio('sounds/playerMove.wav'),
   snakeEncounter: new Audio('sounds/snakeEncounter.wav'),
@@ -141,7 +148,8 @@ const sounds = {
   diceRoll: new Audio('sounds/dice-sound.mp3'),
   gameOver: new Audio('sounds/winningSound.mp3'),
 };
-// Use the data as needed
+
+// Log initial game state for debugging
 console.log('Player Data:', playerData);
 console.log('Player Count:', playerCount);
 console.log('Colors:', colors);
